@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Артефакты сборки и результаты работы
+build/
+dist/
+*.bin
+*.csv.out
+.venv/
+venv/
+
+# Архивы
+*.zip
+*.tar
+*.gz
+*.7z
+*.rar
+
+# Настройки редакторов и IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
