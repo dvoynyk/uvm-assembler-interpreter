@@ -60,8 +60,3 @@ def assemble_text(lines):
             continue
         program.append(translate_row(row, reader.line_num))
     return program
-
-
-def format_instruction(instruction):
-    fields = (f"{name}={value}" for name, value in instruction.items())
-    return ", ".join(fields)
