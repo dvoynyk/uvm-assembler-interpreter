@@ -2,14 +2,15 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.venv/
+venv/
 
-# Артефакты сборки и результаты работы
+# Артефакты сборки и результаты работы программ
 build/
 dist/
 *.bin
-*.csv.out
-.venv/
-venv/
+dump.csv
+*.dump.csv
 
 # Архивы
 *.zip
