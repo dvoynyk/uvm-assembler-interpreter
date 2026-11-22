@@ -1,3 +1,5 @@
+"""Описание системы команд УВМ (вариант 10)."""
+
 from collections import namedtuple
 
 OPCODE_LOAD = 4
@@ -6,6 +8,7 @@ OPCODE_WRITE = 5
 OPCODE_SQRT = 6
 
 OPCODE_BITS = 3
+OPCODE_MASK = (1 << OPCODE_BITS) - 1
 CONST_BITS = 30
 OFFSET_BITS = 11
 
@@ -13,6 +16,8 @@ SIZE_LOAD = 5
 SIZE_READ = 2
 SIZE_WRITE = 1
 SIZE_SQRT = 2
+
+DATA_MEMORY_SIZE = 4096
 
 Command = namedtuple("Command", ["opcode", "operand_bits", "size"])
 
@@ -24,3 +29,6 @@ COMMANDS = {
 }
 
 SIZES = {command.opcode: command.size for command in COMMANDS.values()}
+OPERAND_BITS = {
+    command.opcode: command.operand_bits for command in COMMANDS.values()
+}
